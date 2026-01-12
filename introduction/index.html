@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Spring Boot Demo - Learn what Spring Boot is and why you should use it">
+    <title>Spring Boot Explained - Interactive Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-brand"><span class="spring-icon">🍃</span><span>Spring Boot Demo</span></div>
+        <ul class="nav-links">
+            <li><a href="#what-is" class="nav-link active">What is Spring Boot?</a></li>
+            <li><a href="#why-learn" class="nav-link">Why Learn It?</a></li>
+            <li><a href="#comparison" class="nav-link">Spring vs Spring Boot</a></li>
+            <li><a href="#setup" class="nav-link">First Project</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="pulse"></span><span>Java's Most Popular Framework</span></div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Spring Boot</span><br>
+                <span class="subtitle">Build Production-Ready Apps in Minutes</span>
+            </h1>
+            <p class="hero-description">Discover why millions of developers choose Spring Boot for building robust, scalable, and enterprise-grade applications.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('what-is')"><span>Get Started</span><span class="arrow">→</span></button>
+                <button class="btn btn-secondary" onclick="scrollToSection('comparison')"><span>See Comparison</span></button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="window-header">
+                    <div class="window-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                    <span class="window-title">Application.java</span>
+                </div>
+                <div class="code-content" id="hero-code"><pre><code class="typing-effect"></code></pre></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="what-is">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">What is <span class="highlight">Spring Boot?</span></h2>
+            <p class="section-subtitle">An opinionated framework that simplifies Spring development</p>
+        </div>
+        <div class="explanation-grid" id="features-grid"></div>
+        <div class="definition-box">
+            <div class="definition-visual">
+                <div class="spring-logo-animated"><div class="leaf">🍃</div><div class="boot-text">BOOT</div></div>
+            </div>
+            <div class="definition-content">
+                <h3>In Simple Terms...</h3>
+                <p class="definition-text">Spring Boot is like having a <strong>personal assistant</strong> for your Spring projects. It handles all the boring configuration work, sets up sensible defaults, and lets you focus on writing the code that matters — <em>your business logic</em>.</p>
+                <div class="definition-stats">
+                    <div class="stat"><span class="stat-number" data-count="500">0</span><span class="stat-suffix">K+</span><span class="stat-label">GitHub Stars</span></div>
+                    <div class="stat"><span class="stat-number" data-count="75">0</span><span class="stat-suffix">%</span><span class="stat-label">Less Config</span></div>
+                    <div class="stat"><span class="stat-number" data-count="10">0</span><span class="stat-suffix">M+</span><span class="stat-label">Developers</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="why-learn">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Why Should You <span class="highlight">Learn It?</span></h2>
+            <p class="section-subtitle">Top reasons to add Spring Boot to your skill set</p>
+        </div>
+        <div class="reasons-container" id="reasons-container"></div>
+    </section>
+
+    <section class="section" id="comparison">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Spring <span class="highlight">vs</span> Spring Boot</h2>
+            <p class="section-subtitle">Understanding the key differences</p>
+        </div>
+        <div class="comparison-toggle-container">
+            <button class="comparison-toggle active" data-target="visual">Visual</button>
+            <button class="comparison-toggle" data-target="code">Code</button>
+            <button class="comparison-toggle" data-target="table">Table</button>
+        </div>
+        <div id="comparison-content"></div>
+    </section>
+
+    <section class="section section-gradient" id="setup">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Setting Up Your <span class="highlight">First Project</span></h2>
+            <p class="section-subtitle">Three ways to create a Spring Boot application</p>
+        </div>
+        <div class="setup-methods">
+            <div class="setup-method active" data-method="initializr"><div class="method-icon">🌐</div><h3>Spring Initializr</h3><p>Web-based generator</p></div>
+            <div class="setup-method" data-method="ide"><div class="method-icon">💻</div><h3>IDE Integration</h3><p>IntelliJ / Eclipse / VS Code</p></div>
+            <div class="setup-method" data-method="cli"><div class="method-icon">⌨️</div><h3>Spring CLI</h3><p>Command line</p></div>
+        </div>
+        <div id="setup-content"></div>
+        <div class="run-section">
+            <h3>🚀 Running Your Application</h3>
+            <div class="run-commands">
+                <div class="run-command"><span class="command-label">Maven</span><code>./mvnw spring-boot:run</code></div>
+                <div class="run-command"><span class="command-label">Gradle</span><code>./gradlew bootRun</code></div>
+                <div class="run-command"><span class="command-label">JAR</span><code>java -jar target/demo.jar</code></div>
+            </div>
+            <div class="success-message"><span class="success-icon">✅</span><span>App running at <strong>http://localhost:8080</strong></span></div>
+        </div>
+    </section>
+
+    <section class="section summary-section">
+        <div class="summary-content">
+            <h2>🎉 Ready to Start?</h2>
+            <p>You now know what Spring Boot is, why it's valuable, and how to set up your first project!</p>
+            <div class="summary-cards">
+                <div class="summary-card"><span class="emoji">🍃</span><h4>Spring Boot</h4><p>Simplifies Spring</p></div>
+                <div class="summary-card"><span class="emoji">⚡</span><h4>Auto-Config</h4><p>Zero boilerplate</p></div>
+                <div class="summary-card"><span class="emoji">🚀</span><h4>Production Ready</h4><p>Deploy fast</p></div>
+            </div>
+            <a href="https://start.spring.io" target="_blank" class="cta-button"><span>Create Your Project Now →</span></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Built with ❤️ for Spring Boot learners | Interactive Demo for YouTube Tutorial</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
